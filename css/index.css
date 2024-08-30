@@ -1,0 +1,773 @@
+:root {
+    --color-background: #ff5757;
+    --color-background-2: #ff5757f8;
+    --color-text-primary: white;
+    --color-text-secundary: black;
+    --color-btn: #eefb03;
+    --color-bg-card: #44abc2;
+    --color-bg-card-opacity-less: #44abc2b2;
+    --color-bg-cont: #ffe43d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    overflow-x: hidden;
+}
+
+.te nav {
+    color: var(--color-text-primary);
+}
+
+/*  NAVEGACION */
+.navbar{
+    position: sticky !important;
+    top: 0;
+    z-index: 2;
+    background-color: #ff5757; 
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color de texto normal */
+    padding: 5px 20px; /* Ajusta el padding para un botón más alargado */
+    border-radius: 50px; /* Redondea completamente los bordes para un efecto de cápsula */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    display: inline-block; /* Asegúrate de que el enlace se comporte como un botón */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000000 !important; /* Color de texto al pasar el mouse */
+    background-color: #f7df07; /* Color de fondo al pasar el mouse */
+    border-radius: 50px; /* Mantén el borde redondeado en el estado hover */
+}
+
+
+.cont-principal {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-text-primary);
+    position: relative;
+    z-index: 0;
+    transition: .5s all;
+}
+
+.cont-principal h1 {
+    font-size: 70px;
+}
+
+.cont-principal div a {
+    cursor: pointer;
+    background-color: var(--color-btn);
+    text-decoration: none;
+    color: var(--color-text-secundary);
+    padding: 10px 0px;
+    border-radius: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    margin: 50px 32%;
+    z-index: 10; /* Asegura que esté encima */
+    position: relative; /* Necesario para que z-index funcione */
+}
+
+.cont-principal img {
+    margin-bottom: 190px;
+}
+
+
+/* NUBES */ 
+.figuras-nubes {
+    position: relative;
+    top: -200px;
+    pointer-events: none; /* Esto hará que las nubes no reciban eventos de clic */
+
+}
+
+/*NOSOTROS */ 
+.nosotros {
+    position: relative;
+    top: -205px;
+    background-color: #00ccbf;
+    padding: 150px 0;
+    position: relative;
+    min-height: 300px; /* Ajusta según el tamaño de tu imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
+}
+
+.nosotros-contenedor {
+    background-color: var(--color-bg-cont);
+    padding: 80px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho de la sección */
+    max-width: none; /* Elimina la restricción de ancho máximo */
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box; /* Incluye el padding en el ancho total del contenedor */
+    position: relative; /* Asegura que el contenedor actúe como referencia para el posicionamiento absoluto */
+}
+
+.nosotros-contenedor h2 {
+    font-weight: bold; /* Pone el texto en negrilla */
+    font-size: 3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin-bottom: 5px; /* Espacio debajo del h2 */
+}
+
+.nosotros-contenedor p {
+    font-size: 1.4rem; /* Tamaño del texto */
+    line-height: 1.5; /* Espacio entre líneas más compacto */
+    padding: 10px; /* Espacio interno más reducido */
+    margin: 20px 100px; /* Elimina el margen exterior */
+    border-radius: 8px; /* Bordes redondeados del párrafo */
+}
+
+.arcoiris-img {
+    position: absolute;
+    bottom: -10px; /* Ajusta para colocar la imagen cerca del borde inferior */
+    right: -80px; /* Ajusta para colocar la imagen cerca del borde derecho */
+    width: 550px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    z-index: 1; /* Asegura que la imagen esté detrás del contenido */
+}
+
+.pasto-img {
+    position: relative;
+    top: -250px;
+    width: 100%;
+    height: auto;
+    z-index: 0; /* Asegura que la imagen esté detrás del contenido */
+}
+
+
+/* SERVICIOS */
+.servicios {
+    position: relative;
+    top: -250px;
+    background-image: url(../img/bg-pag3.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 10%;
+}
+
+.servicios div h2 {
+    color: var(--color-text-primary);
+    font-size: 45px;
+    font-weight: bolder;
+    margin-bottom: 100px;
+    
+}
+
+.cards-servicios {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*CARD*/
+.flip-card {
+    background-color: transparent;
+    width: 22rem;
+    height: auto;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: opacity 0.3s;
+  }
+  
+  .flip-card:hover .flip-card-back {
+    opacity: 1;
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: none;
+    border-radius: 1rem;
+    transition: opacity 0.3s;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, var(--color-bg-card) 80%, var(--color-bg-card-opacity-less) 88%,
+       var(--color-bg-card-opacity-less) 20%, var(--color-bg-card-opacity-less) 58%);
+    color: var(--color-text-primary);
+    font-weight: bold;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, #63e178e8 30%, #7ee991 88%,
+    #ceffdb 40%, #b3f8c2 78%);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    padding: 20px;
+    opacity: 0;
+  }
+
+
+/* RESEÑAS */ 
+.resenas {
+    position: relative;
+    top: -150px;
+}
+
+.resenas-slider {
+    background-color: #ffe43d;
+    width: 100%;
+}
+
+.resenas-slider img {
+    border: 5px solid #fff; /* Borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+.resenas-slider img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+.resenas h4 {
+    font-size: 40px;
+}
+
+.resenas h2 {
+    padding: 5% 10%;
+    color: var(--color-text-primary);
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Fondo oscuro */
+    border-radius: 50%; /* Flechas redondeadas */
+    padding: 10px; /* Espaciado interno */
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-weight: 900;
+}
+
+
+.carousel-item img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 5px solid #fff; /* Borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+
+.btn-custom {
+    background-color: var(--color-bg-card) !important;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #e50687 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    color: #fff !important;
+}
+
+/*--------------PRUEBAS-----------------------*/ 
+ 
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Reduce el padding en móviles para menos borde */
+        font-size: 14px; /* Tamaño de fuente más pequeño en dispositivos móviles */
+
+    }
+    .navbar-brand img {
+        height: 70px !important; /* Reducir el tamaño del logo en dispositivos móviles */
+    }
+}
+
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767px) {
+    .cont-principal {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: center; /* Centrar los elementos horizontalmente */
+        text-align: center; /* Asegúrate de que el texto esté centrado */
+    }
+
+    .cont-principal h1 {
+        font-size: 40px; /* Tamaño de fuente más pequeño en dispositivos móviles */
+        margin-bottom: 20px; /* Añadir margen inferior para separar el texto de la imagen */
+    }
+
+    .cont-principal div a {
+        margin: 20px 0; /* Ajustar el margen para centrar el botón y separarlo del texto */
+        padding: 10px 20px; /* Ajustar el padding para botones más pequeños */
+    }
+
+    .cont-principal img {
+        width: 50%; /* Reducir el tamaño de la imagen de la carita al 50% del ancho disponible */
+        max-width: 300px; /* Opcional: Limitar el ancho máximo para evitar que la imagen sea demasiado grande */
+        margin-top: 20px; /* Añadir margen superior para separarla del texto */
+    }
+
+    .cont-principal img {
+        margin-bottom: 50px;
+    }
+
+    .figuras-nubes img {
+        width: 100%; /* Asegúrate de que la imagen de las nubes ocupe el ancho completo */
+        position: relative;
+        top: 0; /* Ajusta la posición para que se adapte mejor en móviles */
+    }
+
+    .nosotros-contenedor {
+        padding: 80px 10px;     
+    }
+    
+    .nosotros-contenedor h2 {
+        font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    }
+    
+    .nosotros-contenedor p {
+        font-size: 1.2rem; 
+        padding: 10px 0; /* Espacio interno más reducido */
+        margin: 20px 0px; /* Elimina el margen exterior */
+    }
+}
+/* Ajustes para pantallas entre 770px y 882px */
+@media (min-width: 770px) and (max-width: 780px) {
+    .cont-principal {
+        flex-direction: row; /* Mantener la imagen y el texto en la misma línea */
+        justify-content: space-between; /* Separar el texto y la imagen */
+    }
+
+    .cont-principal img {
+        width: 50%; /* Ajustar el tamaño de la imagen en pantallas en este rango */
+        max-width: 400px; /* Limitar el ancho máximo para pantallas en este rango */
+        margin-left: auto; /* Empujar la imagen hacia la derecha */
+        margin-right: 0; /* Asegurarse de que no haya margen a la derecha */
+    }
+
+    .cont-principal h1 {
+        font-size: 50px; /* Reducir el tamaño de la fuente del encabezado en este rango */
+        margin-right: 20px; /* Añadir margen a la derecha para separarlo de la imagen */
+    }
+
+    .cont-principal div a {
+        font-size: 16px; /* Reducir el tamaño de la fuente del botón en este rango */
+    }
+}
+
+
+/* Ajustes para pantallas entre 882x y 1000px */
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    .cont-principal {
+        flex-direction: row; /* Mantener la imagen y el texto en la misma línea */
+        justify-content: space-between; /* Separar el texto y la imagen */
+        align-items: center; /* Alinear verticalmente en el centro */
+        text-align: left; /* Alinear el texto a la izquierda */
+    }
+
+    .cont-principal img {
+        width: 100%; /* Ajustar el tamaño de la imagen en pantallas en este rango */
+        max-width: 500px; /* Limitar el ancho máximo para pantallas en este rango */
+        margin-left: auto; /* Empujar la imagen hacia la derecha */
+    }
+
+    .cont-principal h1 {
+        font-size: 60px; /* Reducir el tamaño de la fuente del encabezado en este rango */
+        margin-right: 20px; /* Añadir margen a la derecha para separarlo de la imagen */
+    }
+
+    .cont-principal div a {
+        font-size: 16px; /* Reducir el tamaño de la fuente del botón en este rango */
+    }
+}
+
+
+
+/* SECCION SERVICIOS */
+
+@media (min-width: 992px) {
+    .cards-servicios {
+        gap: 90px; /* Incrementa el espacio entre las tarjetas */
+    }
+} 
+
+
+/* SECCION NOSOTROS */ 
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767px) {
+
+    .arcoiris-img {
+        position: absolute;
+        bottom: 50px; /* Ajusta para colocar la imagen cerca del borde inferior */
+        right: -60px; /* Ajusta para colocar la imagen cerca del borde derecho */
+        width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+        z-index: 1; /* Asegura que la imagen esté detrás del contenido */
+    }
+        
+}
+
+
+@media (min-width: 801px) and (max-width: 1000px) {
+      .arcoiris-img {
+        position: absolute;
+        bottom: 0px; /* Ajusta para colocar la imagen cerca del borde inferior */
+        right: -62px; /* Ajusta para colocar la imagen cerca del borde derecho */
+        width: 350px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: auto;
+        z-index: 1; /* Asegura que la imagen esté detrás del contenido */
+    }
+
+}
+
+/*SECCION RESEÑAS */ 
+@media (max-width: 768px) {
+    .carousel-control-prev {
+        display: none;
+    }
+
+    .carousel-control-next {
+        display: none;
+    }
+
+    .carousel-item img {
+        width: 50%; /* Ajusta el ancho de la imagen si es necesario */
+        margin-top: 5px; /* Añade un margen superior para separarlo del texto */
+    }
+
+    
+    .carousel-item h4 {
+        font-size: 1rem;
+        margin-top: 25px;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+    }
+
+    .resenas h2 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+
+}
+
+/* RESPONSIVE NUBES, PASTO SECCIONES Y DEMAS*/
+
+@media (max-width: 1358px) {
+    .nosotros {
+        position: relative;
+        top: -150px;
+    }
+
+    .figuras-nubes {
+        position: relative;
+        top: -148px;
+    }
+
+    .arcoiris-img {
+        position: absolute;
+        bottom: -10px;
+    }
+    
+    .pasto-img {
+        position: relative;
+        top: -200px;
+    }
+    
+    .servicios {
+        position: relative;
+        top: -200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-item .d-flex {
+        flex-direction: column; /* Cambia la dirección del flex para que la imagen quede debajo */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .carousel-item img {
+        width: 50%; /* Ajusta el ancho de la imagen si es necesario */
+        margin-top: 5px; /* Añade un margen superior para separarlo del texto */
+    }
+
+    .carousel-item div {
+        padding: 0rem !important;
+    }
+
+    .carousel-item h4 {
+        font-size: 2rem;
+        margin-top: 25px;
+    }
+
+    .carousel-item p {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .carousel-item img {
+        width: 80%; /* Ajusta el ancho de la imagen si es necesario */
+        margin-top: 5px; /* Añade un margen superior para separarlo del texto */
+    }
+
+    .carousel-item h4 {
+        font-size: 1.5rem; /* Tamaño de letra más pequeño para dispositivos móviles */
+    }
+
+    .carousel-item p {
+        font-size: 1.1rem; /* Tamaño de letra más pequeño para dispositivos móviles */
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1028px) {
+    .nosotros {
+        position: relative;
+        top: -110px;
+    }
+
+    .figuras-nubes {
+        position: relative;
+        top: -108px;
+    }
+
+    .arcoiris-img {
+        position: absolute;
+        bottom: -10px;
+    }
+    
+    .pasto-img {
+        position: relative;
+        top: -150px;
+    }
+    
+    .servicios {
+        position: relative;
+        top: -150px;
+    }
+}
+
+/*CONTACTANOS*/
+
+
+
+.contactanos-section {
+    background-color: var(--color-background);
+    padding: 50px;
+    position: relative;
+    top: -100px;
+}
+
+.movil-title {
+    color: var(--color-text-primary);
+    font-size: 40px;
+}
+
+.contact-link {
+    background-color: var(--color-bg-card);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contactanos-section {
+        padding: 30px 20px; /* Ajusta el padding para pantallas más pequeñas */
+        top: -50px; /* Ajusta la posición superior */
+    }
+
+    .movil-title {
+        font-size: 35px; /* Ajusta el tamaño de la fuente para tabletas y teléfonos grandes */
+        margin: 3rem 0; /* Reduce el margen superior/inferior */
+    }
+
+    .contact-link i {
+        font-size: 1.5rem; /* Reduce el tamaño del icono en pantallas medianas */
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactanos-section {
+        padding: 30px; /* Reduce aún más el padding en pantallas muy pequeñas */
+        top: -100px; /* Ajusta la posición superior */
+    }
+
+    .movil-title {
+        font-size: 28px; /* Ajusta el tamaño de la fuente para teléfonos pequeños */
+        margin: 2rem 0; /* Reduce el margen superior/inferior */
+    }
+
+    .contact-link i {
+        font-size: 1.2rem; /* Reduce aún más el tamaño del icono en pantallas pequeñas */
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .movil-title {
+        font-size: 24px; /* Ajusta el tamaño de la fuente para pantallas muy pequeñas */
+        margin: 1.5rem 0; /* Ajusta el margen superior/inferior */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+
+    .contact-link i {
+        font-size: 1rem; /* Ajusta el tamaño del icono para pantallas muy pequeñas */
+        padding: 0.6rem;
+    }
+}
+
+
+
+/* FOOTER */ 
+
+footer img {
+    width: 50% !important;
+}
+
+
+
+
+@media (max-width: 992px) { /* Tablets */
+    footer img {
+        width: 40%; /* Adjust to desired size */
+        height: auto;
+    }
+    footer .col-md-2,
+    footer .col-md-2 {
+        margin-right: 60px; /* Adjust the right margin as needed */
+    }
+}
+
+@media (max-width: 576px) { /* Mobile devices */
+    footer img {
+        width: 20% !important;
+    }
+}
+
+/* BOTON FLOTANTE WHATSAPP y INSTAGRAM*/ 
+
+/* Estilos para el botón de WhatsApp */
+.btn-wsp {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    bottom: 25px; /* Posición desde el borde inferior */
+    right: 25px;  /* Posición desde el borde derecho */
+    background: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+}
+
+.btn-wsp:hover {
+    background: #20ba5a;
+}
+
+.btn-wsp .fa-whatsapp {
+    font-size: 40px;
+}
+
+/* Estilos para el botón de Instagram */
+.btn-inst {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    bottom: 115px; /* Ajustado para estar debajo del botón de WhatsApp */
+    right: 25px;
+    background: #e4405f;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+}
+
+.btn-inst:hover {
+    background: #c13584;
+}
+
+.btn-inst .fa-instagram {
+    font-size: 40px;
+}
+
+
+.hide-buttons {
+    display: none;
+}
+
+
+
+
+
+
+/* Tamaños Responsivos */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .btn-wsp, .btn-inst {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .btn-wsp {
+        font-size: 40px; /* Tamaño del icono en dispositivos móviles */
+    }
+
+    .btn-inst {
+        font-size: 40px; /* Tamaño del icono en dispositivos móviles */
+        bottom: 90px; /* Ajusta la posición en pantallas más pequeñas */
+    }
+}
+
